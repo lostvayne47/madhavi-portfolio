@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Github, Linkedin, Instagram } from "lucide-react";
 
@@ -8,12 +7,14 @@ const Footer = () => {
       <div className="container-custom">
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="mb-6 md:mb-0">
-            <span className="font-semibold text-lg text-primary">Psychology Portfolio</span>
+            <span className="font-semibold text-lg text-primary">
+              Psychology Portfolio
+            </span>
             <p className="mt-2 text-sm text-gray-500">
-              © {new Date().getFullYear()} Your Name. All rights reserved.
+              © {new Date().getFullYear()} Madhavi Menon. All rights reserved.
             </p>
           </div>
-          
+
           <div className="flex space-x-6">
             <a
               href="#"

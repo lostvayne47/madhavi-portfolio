@@ -19,7 +19,7 @@ const Hero = () => {
 
             <h1 className="heading-xl">
               <span className="text-gray-800">Hello, I'm </span>
-              <span className="text-primary">Your Name</span>
+              <span className="text-primary">Madhavi</span>
             </h1>
 
             <p className="text-lg md:text-xl text-gray-600 max-w-2xl">

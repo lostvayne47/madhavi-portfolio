@@ -2,9 +2,9 @@ import React from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { BriefcaseBusiness, GraduationCap } from "lucide-react";
-import { educationData, experienceData } from "../Constants.js";
+import { EducationData, ExperienceData } from "../Constants.js";
 
-const TimelineList = ({ data }: { data: typeof experienceData }) => (
+const TimelineList = ({ data }: { data: typeof ExperienceData }) => (
   <div className="space-y-6">
     <div className="relative border-l-2 border-primary/30 pl-8 ml-4">
       {data.map((item, index) => (
@@ -62,11 +62,11 @@ const ExperienceEducation = () => {
           </TabsList>
 
           <TabsContent value="experience" className="animate-fade-in">
-            <TimelineList data={experienceData} />
+            <TimelineList data={ExperienceData} />
           </TabsContent>
 
           <TabsContent value="education" className="animate-fade-in">
-            <TimelineList data={educationData} />
+            <TimelineList data={EducationData} />
           </TabsContent>
         </Tabs>
       </div>

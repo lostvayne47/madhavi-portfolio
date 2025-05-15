@@ -2,7 +2,7 @@ import React from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { BookOpen, Brain, Users, Lightbulb } from "lucide-react";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
-
+import { AboutMe, PhD, Masters, Bachelors } from "../Constants.js";
 const About = () => {
   return (
     <section id="about" className="section-padding bg-muted">
@@ -10,12 +10,7 @@ const About = () => {
         <div className="mb-16">
           <h2 className="heading-lg text-gray-800 mb-4">About Me</h2>
           <div className="w-20 h-1 bg-primary mb-8"></div>
-          <p className="text-gray-600 max-w-3xl text-lg">
-            I'm a passionate psychology researcher with expertise in cognitive
-            psychology and mental health interventions. My work combines research
-            methodologies with practical applications to address real-world
-            challenges in mental health care.
-          </p>
+          <p className="text-gray-600 max-w-3xl text-lg">{AboutMe}</p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -28,9 +23,9 @@ const About = () => {
                 <div>
                   <h3 className="heading-md mb-2">Education</h3>
                   <ul className="space-y-2 text-gray-600">
-                    <li>PhD in Clinical Psychology - University Name (Year)</li>
-                    <li>Master's in Psychology - University Name (Year)</li>
-                    <li>Bachelor's in Psychology - University Name (Year)</li>
+                    <li>{PhD}</li>
+                    <li>{Masters}</li>
+                    <li>{Bachelors}</li>
                   </ul>
                 </div>
               </div>

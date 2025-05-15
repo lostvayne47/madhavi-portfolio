@@ -4,9 +4,12 @@ import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 
 const Hero = () => {
   return (
-    <section className="pt-32 pb-20 md:pt-40 md:pb-28 px-6 md:px-12 lg:px-24">
+    <section className="min-h-screen pt-32 pb-20 md:pt-40 md:pb-28 px-6 md:px-12 lg:px-24">
       <div className="container-custom">
-        <div className="flex flex-col md:flex-row items-center gap-12">
+        <div
+          className="flex flex-col md:flex-row items-center"
+          style={{ gap: "10rem" }}
+        >
           <div className="flex flex-col items-start space-y-8 max-w-3xl">
             <div className="inline-block px-4 py-1.5 bg-accent rounded-full">
               <p className="text-sm font-medium text-primary">

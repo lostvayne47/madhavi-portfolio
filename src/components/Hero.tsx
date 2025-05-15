@@ -1,6 +1,7 @@
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
+import { FullName } from "../Constants.js";
 
 const Hero = () => {
   return (
@@ -19,7 +20,7 @@ const Hero = () => {
 
             <h1 className="heading-xl">
               <span className="text-gray-800">Hello, I'm </span>
-              <span className="text-primary">Madhavi</span>
+              <span className="text-primary">{FullName.split(" ")[0]}</span>
             </h1>
 
             <p className="text-lg md:text-xl text-gray-600 max-w-2xl">
@@ -30,13 +31,13 @@ const Hero = () => {
 
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
               <Button className="bg-primary hover:bg-secondary hover-lift">
-                View Projects
+                <a href="#projects">View Projects</a>
               </Button>
               <Button
                 variant="outline"
                 className="border-primary text-primary hover:text-primary hover-lift"
               >
-                Contact Me
+                <a href="#contact">Contact Me</a>
               </Button>
             </div>
 

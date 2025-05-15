@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { cn } from "@/lib/utils";
 import { FullName } from "../Constants.js";
+
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -17,6 +19,11 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  // Close menu on link click (mobile)
+  const handleLinkClick = () => {
+    setMenuOpen(false);
+  };
+
   return (
     <nav
       className={cn(
@@ -26,11 +33,12 @@ const Navbar = () => {
           : "bg-transparent"
       )}
     >
-      <div className="container-custom flex justify-between items-center h-16 md:h-20">
+      <div className="container-custom flex justify-between items-center h-16 md:h-20 px-4">
         <a href="#" className="font-semibold text-lg md:text-xl text-primary">
           {FullName}
         </a>
 
+        {/* Desktop Links */}
         <div className="hidden md:flex space-x-10">
           <a
             href="#about"
@@ -58,7 +66,12 @@ const Navbar = () => {
           </a>
         </div>
 
-        <button className="md:hidden text-gray-800">
+        {/* Mobile Menu Button */}
+        <button
+          className="md:hidden text-gray-800"
+          aria-label="Toggle navigation menu"
+          onClick={() => setMenuOpen((prev) => !prev)}
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             className="h-6 w-6"
@@ -75,6 +88,40 @@ const Navbar = () => {
           </svg>
         </button>
       </div>
+
+      {/* Mobile Menu */}
+      {menuOpen && (
+        <div className="md:hidden bg-white shadow-md px-6 py-4 space-y-4">
+          <a
+            href="#about"
+            className="block text-gray-800 hover:text-primary transition-custom"
+            onClick={handleLinkClick}
+          >
+            About
+          </a>
+          <a
+            href="#projects"
+            className="block text-gray-800 hover:text-primary transition-custom"
+            onClick={handleLinkClick}
+          >
+            Projects
+          </a>
+          <a
+            href="#experience-education"
+            className="block text-gray-800 hover:text-primary transition-custom"
+            onClick={handleLinkClick}
+          >
+            Career
+          </a>
+          <a
+            href="#contact"
+            className="block text-gray-800 hover:text-primary transition-custom"
+            onClick={handleLinkClick}
+          >
+            Contact
+          </a>
+        </div>
+      )}
     </nav>
   );
 };

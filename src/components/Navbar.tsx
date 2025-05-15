@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from "react";
 import { cn } from "@/lib/utils";
 
@@ -29,7 +28,7 @@ const Navbar = () => {
     >
       <div className="container-custom flex justify-between items-center h-16 md:h-20">
         <a href="#" className="font-semibold text-lg md:text-xl text-primary">
-          Psychology Portfolio
+          Madhavi Menon
         </a>
 
         <div className="hidden md:flex space-x-10">
@@ -44,6 +43,18 @@ const Navbar = () => {
             className="text-gray-800 hover:text-primary transition-custom"
           >
             Projects
+          </a>
+          <a
+            href="#experience-education"
+            className="text-gray-800 hover:text-primary transition-custom"
+          >
+            Experience
+          </a>
+          <a
+            href="#experience-education"
+            className="text-gray-800 hover:text-primary transition-custom"
+          >
+            Education
           </a>
           <a
             href="#contact"

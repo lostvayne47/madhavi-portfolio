@@ -48,13 +48,7 @@ const Navbar = () => {
             href="#experience-education"
             className="text-gray-800 hover:text-primary transition-custom"
           >
-            Experience
-          </a>
-          <a
-            href="#experience-education"
-            className="text-gray-800 hover:text-primary transition-custom"
-          >
-            Education
+            Career
           </a>
           <a
             href="#contact"

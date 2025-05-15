@@ -1,21 +1,32 @@
-
 import React from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { BookOpen, Brain, Users, Lightbulb } from "lucide-react";
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 
 const About = () => {
   return (
     <section id="about" className="section-padding bg-muted">
       <div className="container-custom">
-        <div className="mb-16">
-          <h2 className="heading-lg text-gray-800 mb-4">About Me</h2>
-          <div className="w-20 h-1 bg-primary mb-8"></div>
-          <p className="text-gray-600 max-w-3xl text-lg">
-            I'm a passionate psychology researcher with expertise in cognitive
-            psychology and mental health interventions. My work combines research
-            methodologies with practical applications to address real-world
-            challenges in mental health care.
-          </p>
+        <div className="flex flex-col md:flex-row items-start md:items-center gap-8 mb-16">
+          <Avatar className="h-32 w-32 border-4 border-primary shadow-lg">
+            <AvatarImage 
+              src="https://images.unsplash.com/photo-1581092795360-fd1ca04f0952" 
+              alt="Profile" 
+              className="object-cover"
+            />
+            <AvatarFallback className="text-2xl bg-accent text-primary">PA</AvatarFallback>
+          </Avatar>
+          
+          <div>
+            <h2 className="heading-lg text-gray-800 mb-4">About Me</h2>
+            <div className="w-20 h-1 bg-primary mb-8"></div>
+            <p className="text-gray-600 max-w-3xl text-lg">
+              I'm a passionate psychology researcher with expertise in cognitive
+              psychology and mental health interventions. My work combines research
+              methodologies with practical applications to address real-world
+              challenges in mental health care.
+            </p>
+          </div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">

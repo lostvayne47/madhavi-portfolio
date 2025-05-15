@@ -46,7 +46,7 @@ const Hero = () => {
           <div className="order-first md:order-last">
             <Avatar className="h-60 w-75 border-4 border-primary shadow-lg">
               <AvatarImage
-                src="https://images.unsplash.com/photo-1581092795360-fd1ca04f0952"
+                src="/profile-photo.png"
                 alt="Profile"
                 className="object-cover"
               />

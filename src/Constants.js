@@ -45,25 +45,19 @@ const ExperienceData = [
 
 const EducationData = [
   {
-    title: "PhD in Clinical Psychology",
-    time: "2016 - 2020",
-    place: "University Name",
+    title: "Master of Science- Clinical and Neuroscience Psychology",
+    time: "2022 - 2024",
+    place: "Universita di Pavia",
+
     description:
-      'Dissertation: "Cognitive Behavioral Interventions for Anxiety Disorders in Young Adults"',
+      "Specialized in clinical psychology with a focus on assessment and therapeutic techniques. Graduated with honors. \n Thesis: Neural entrainment in typically developing infants: exploring effects of rhythmic training. \n Grade: 106/110",
   },
   {
-    title: "Master's in Psychology",
-    time: "2014 - 2016",
-    place: "University Name",
+    title: "Bachelor of Arts - Psychology (Hons.)",
+    time: "2019 - 2022",
+    place: "Savitribai Phule Pune University ",
     description:
-      "Specialized in clinical psychology with a focus on assessment and therapeutic techniques. Graduated with honors.",
-  },
-  {
-    title: "Bachelor's in Psychology",
-    time: "2010 - 2014",
-    place: "University Name",
-    description:
-      "Foundation courses in psychology, research methods, and statistics. Minor in Sociology.",
+      "Foundation courses in psychology, research methods, and statistics. Minor in Sociology & Political Science. \n Cumulative GPA: 9.42 (Rank #1 in batch with 91.17%)",
   },
 ];
 

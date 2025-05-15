@@ -1,6 +1,6 @@
 import React from "react";
 import { Github, Linkedin, Instagram } from "lucide-react";
-
+import { FullName } from "../Constants.js";
 const Footer = () => {
   return (
     <footer className="bg-white py-12 px-6 border-t border-gray-100">
@@ -8,10 +8,10 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="mb-6 md:mb-0">
             <span className="font-semibold text-lg text-primary">
-              Psychology Portfolio
+              My Portfolio
             </span>
             <p className="mt-2 text-sm text-gray-500">
-              © {new Date().getFullYear()} Madhavi Menon. All rights reserved.
+              © {new Date().getFullYear()} {FullName}. All rights reserved.
             </p>
           </div>
 

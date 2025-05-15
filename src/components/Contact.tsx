@@ -1,11 +1,10 @@
-
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Card, CardContent } from "@/components/ui/card";
 import { Mail, Phone, MapPin } from "lucide-react";
-
+import { Email, Phone1, Phone2, Location } from "../Constants.js";
 const Contact = () => {
   return (
     <section id="contact" className="section-padding bg-muted">
@@ -27,12 +26,15 @@ const Contact = () => {
               </div>
               <h3 className="heading-md mb-2">Email</h3>
               <p className="text-gray-600 mb-4">Feel free to email me</p>
-              <a href="mailto:your.email@example.com" className="text-primary hover:text-secondary transition-custom">
-                your.email@example.com
+              <a
+                href={`mailto:${Email}`}
+                className="text-primary hover:text-secondary transition-custom"
+              >
+                {Email}
               </a>
             </CardContent>
           </Card>
-          
+
           <Card className="border-none shadow-sm bg-white hover-lift">
             <CardContent className="flex flex-col items-center text-center p-8">
               <div className="bg-accent p-4 rounded-full mb-6">
@@ -40,12 +42,21 @@ const Contact = () => {
               </div>
               <h3 className="heading-md mb-2">Phone</h3>
               <p className="text-gray-600 mb-4">Call for inquiries</p>
-              <a href="tel:+1234567890" className="text-primary hover:text-secondary transition-custom">
-                +1 (234) 567-890
+              <a
+                href={`tel:${Phone1}`}
+                className="text-primary hover:text-secondary transition-custom"
+              >
+                {Phone1}
+              </a>
+              <a
+                href={`tel:${Phone2}`}
+                className="text-primary hover:text-secondary transition-custom"
+              >
+                {Phone2}
               </a>
             </CardContent>
           </Card>
-          
+
           <Card className="border-none shadow-sm bg-white hover-lift">
             <CardContent className="flex flex-col items-center text-center p-8">
               <div className="bg-accent p-4 rounded-full mb-6">
@@ -53,9 +64,7 @@ const Contact = () => {
               </div>
               <h3 className="heading-md mb-2">Location</h3>
               <p className="text-gray-600 mb-4">Based in</p>
-              <span className="text-primary">
-                City, Country
-              </span>
+              <span className="text-primary">{Location}</span>
             </CardContent>
           </Card>
         </div>
@@ -65,7 +74,10 @@ const Contact = () => {
             <form className="space-y-6">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="space-y-2">
-                  <label htmlFor="name" className="text-sm font-medium text-gray-700">
+                  <label
+                    htmlFor="name"
+                    className="text-sm font-medium text-gray-700"
+                  >
                     Name
                   </label>
                   <Input
@@ -75,7 +87,10 @@ const Contact = () => {
                   />
                 </div>
                 <div className="space-y-2">
-                  <label htmlFor="email" className="text-sm font-medium text-gray-700">
+                  <label
+                    htmlFor="email"
+                    className="text-sm font-medium text-gray-700"
+                  >
                     Email
                   </label>
                   <Input
@@ -87,7 +102,10 @@ const Contact = () => {
                 </div>
               </div>
               <div className="space-y-2">
-                <label htmlFor="subject" className="text-sm font-medium text-gray-700">
+                <label
+                  htmlFor="subject"
+                  className="text-sm font-medium text-gray-700"
+                >
                   Subject
                 </label>
                 <Input
@@ -97,7 +115,10 @@ const Contact = () => {
                 />
               </div>
               <div className="space-y-2">
-                <label htmlFor="message" className="text-sm font-medium text-gray-700">
+                <label
+                  htmlFor="message"
+                  className="text-sm font-medium text-gray-700"
+                >
                   Message
                 </label>
                 <Textarea

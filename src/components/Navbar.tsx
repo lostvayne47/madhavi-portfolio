@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { cn } from "@/lib/utils";
-
+import { FullName } from "../Constants.js";
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
 
@@ -28,7 +28,7 @@ const Navbar = () => {
     >
       <div className="container-custom flex justify-between items-center h-16 md:h-20">
         <a href="#" className="font-semibold text-lg md:text-xl text-primary">
-          Madhavi Menon
+          {FullName}
         </a>
 
         <div className="hidden md:flex space-x-10">

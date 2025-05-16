@@ -3,6 +3,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { BriefcaseBusiness, GraduationCap } from "lucide-react";
 import { EducationData, ExperienceData } from "../Constants.js";
+import FadeInOnScroll from "./FadeInOnScroll.js";
 
 const TimelineList = ({ data }: { data: typeof ExperienceData }) => (
   <div className="space-y-6">
@@ -41,9 +42,11 @@ const ExperienceEducation = () => {
     <section id="experience-education" className="section-padding">
       <div className="container-custom">
         <div className="mb-16">
-          <h2 className="heading-lg text-gray-800 mb-4">
-            Experience & Education
-          </h2>
+          <FadeInOnScroll>
+            <h2 className="heading-lg text-gray-800 mb-4">
+              Experience & Education
+            </h2>
+          </FadeInOnScroll>
           <div className="w-20 h-1 bg-primary mb-8"></div>
           <p className="text-gray-600 max-w-3xl text-lg">
             My academic journey and professional experience in the field of

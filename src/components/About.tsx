@@ -1,14 +1,16 @@
 import React from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { BookOpen, Brain, Users, Lightbulb } from "lucide-react";
-import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import { AboutMe, PhD, Masters, Bachelors } from "../Constants.js";
+import FadeInOnScroll from "@/components/FadeInOnScroll.js";
 const About = () => {
   return (
     <section id="about" className="section-padding bg-muted">
       <div className="container-custom">
         <div className="mb-16">
-          <h2 className="heading-lg text-gray-800 mb-4">About Me</h2>
+          <FadeInOnScroll>
+            <h2 className="heading-lg text-gray-800 mb-4">About Me</h2>
+          </FadeInOnScroll>
           <div className="w-20 h-1 bg-primary mb-8"></div>
           <p className="text-gray-600 max-w-3xl text-lg">{AboutMe}</p>
         </div>

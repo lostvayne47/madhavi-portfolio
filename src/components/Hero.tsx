@@ -17,7 +17,19 @@ const Hero = () => {
 
             <h1 className="heading-xl">
               <span className="text-gray-800">Hello, I'm </span>
-              <span className="text-primary">{FullName.split(" ")[0]}</span>
+              <span>
+                {FullName.split(" ")[0]
+                  .split("")
+                  .map((char, idx) => (
+                    <span
+                      key={idx}
+                      className="inline-block text-primary animate-drop"
+                      style={{ animationDelay: `${idx * 0.15}s` }}
+                    >
+                      {char}
+                    </span>
+                  ))}
+              </span>
             </h1>
 
             <p className="text-lg md:text-xl text-gray-600 max-w-2xl">

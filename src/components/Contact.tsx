@@ -5,12 +5,15 @@ import { Textarea } from "@/components/ui/textarea";
 import { Card, CardContent } from "@/components/ui/card";
 import { Mail, Phone, MapPin } from "lucide-react";
 import { Email, Phone1, Phone2, Location } from "../Constants.js";
+import FadeInOnScroll from "./FadeInOnScroll.js";
 const Contact = () => {
   return (
     <section id="contact" className="section-padding bg-muted">
       <div className="container-custom">
         <div className="mb-16">
-          <h2 className="heading-lg text-gray-800 mb-4">Get In Touch</h2>
+          <FadeInOnScroll>
+            <h2 className="heading-lg text-gray-800 mb-4">Get In Touch</h2>
+          </FadeInOnScroll>
           <div className="w-20 h-1 bg-primary mb-8"></div>
           <p className="text-gray-600 max-w-3xl text-lg">
             Interested in collaboration or have questions about my research?

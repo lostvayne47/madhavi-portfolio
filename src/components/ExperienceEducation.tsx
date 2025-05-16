@@ -11,7 +11,7 @@ const TimelineList = ({ data }: { data: typeof ExperienceData }) => (
         <div key={index} className="mb-10 relative">
           <div className="absolute -left-[41px] top-1 h-6 w-6 rounded-full border-2 border-primary bg-white"></div>
           <Card className="border-none shadow-sm hover-lift">
-            <CardContent className="p-6">
+            <CardContent className="p-6 whitespace-pre-line">
               <div className="flex flex-col md:flex-row md:justify-between mb-2">
                 <h3 className="font-bold text-xl text-gray-800">
                   {item.title}
@@ -19,7 +19,15 @@ const TimelineList = ({ data }: { data: typeof ExperienceData }) => (
                 <span className="text-primary font-medium">{item.time}</span>
               </div>
               <p className="text-gray-500 font-medium mb-3">{item.place}</p>
-              <p className="text-gray-600">{item.description}</p>
+              <p className="text-gray-600">
+                <ul className="list-disc list-inside">
+                  {item.description
+                    .split("\n")
+                    .map((line, index) =>
+                      line.trim() ? <li key={index}>{line.trim()}</li> : null
+                    )}
+                </ul>
+              </p>
             </CardContent>
           </Card>
         </div>

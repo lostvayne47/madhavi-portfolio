@@ -53,7 +53,11 @@ const Navbar = () => {
       )}
     >
       <div className="container-custom flex justify-between items-center h-16 md:h-20 px-4">
-        <a href="#" className="font-semibold text-lg md:text-xl text-primary">
+        <a
+          href="#"
+          className="font-semibold text-lg md:text-xl text-primary"
+          onClick={() => setActiveSection("")}
+        >
           {FullName}
         </a>
 

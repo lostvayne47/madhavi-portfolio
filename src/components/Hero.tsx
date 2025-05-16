@@ -7,10 +7,7 @@ const Hero = () => {
   return (
     <section className="min-h-screen pt-32 pb-20 md:pt-40 md:pb-28 px-6 md:px-12 lg:px-24">
       <div className="container-custom">
-        <div
-          className="flex flex-col md:flex-row items-center"
-          style={{ gap: "10rem" }}
-        >
+        <div className="flex flex-col md:flex-row items-center gap-12">
           <div className="flex flex-col items-start space-y-8 max-w-3xl">
             <div className="inline-block px-4 py-1.5 bg-accent rounded-full">
               <p className="text-sm font-medium text-primary">
@@ -45,16 +42,11 @@ const Hero = () => {
           </div>
 
           <div className="order-first md:order-last">
-            <Avatar className="h-60 w-75 border-4 border-primary shadow-lg">
-              <AvatarImage
-                src="/profile-photo.jpeg"
-                alt="Profile"
-                className="object-cover"
-              />
-              <AvatarFallback className="text-3xl bg-accent text-primary">
-                PA
-              </AvatarFallback>
-            </Avatar>
+            <img
+              src="/profile-photo.jpeg"
+              alt="Profile"
+              className="object-cover rounded-full border-[5px] border-[#622ad9] max-h-[400px] min-h-[200px] transition-all duration-300 hover:scale-105 hover:shadow-[0_0_20px_#622ad9]"
+            />
           </div>
         </div>
       </div>

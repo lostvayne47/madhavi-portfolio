@@ -69,7 +69,7 @@ const Contact = () => {
           </Card>
         </div>
 
-        <Card className="mt-12 border-none shadow-md bg-white">
+        {/* <Card className="mt-12 border-none shadow-md bg-white">
           <CardContent className="p-8">
             <form className="space-y-6">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -133,7 +133,7 @@ const Contact = () => {
               </Button>
             </form>
           </CardContent>
-        </Card>
+        </Card> */}
       </div>
     </section>
   );

@@ -15,7 +15,7 @@ const Footer = () => {
             </p>
           </div>
 
-          <div className="flex space-x-6">
+          {/* <div className="flex space-x-6">
             <a
               href="#"
               className="text-gray-500 hover:text-primary transition-custom"
@@ -37,7 +37,7 @@ const Footer = () => {
             >
               <Instagram className="h-5 w-5" />
             </a>
-          </div>
+          </div> */}
         </div>
       </div>
     </footer>

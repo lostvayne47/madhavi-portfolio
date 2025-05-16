@@ -5,21 +5,40 @@ import { FullName } from "../Constants.js";
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState("");
 
+  const sections = [
+    { id: "about", label: "About" },
+    { id: "experience-education", label: "Career" },
+    { id: "projects", label: "Projects" },
+    { id: "contact", label: "Contact" },
+  ];
+
+  // Handle background on scroll
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 20) {
-        setScrolled(true);
-      } else {
-        setScrolled(false);
+      setScrolled(window.scrollY > 20);
+
+      // Active section logic
+      const scrollY = window.scrollY + 100;
+      for (const section of sections) {
+        const el = document.getElementById(section.id);
+        if (el) {
+          const top = el.offsetTop;
+          const height = el.offsetHeight;
+          if (scrollY >= top && scrollY < top + height) {
+            setActiveSection(section.id);
+            break;
+          }
+        }
       }
     };
 
     window.addEventListener("scroll", handleScroll);
+    handleScroll(); // run on load
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Close menu on link click (mobile)
   const handleLinkClick = () => {
     setMenuOpen(false);
   };
@@ -40,36 +59,28 @@ const Navbar = () => {
 
         {/* Desktop Links */}
         <div className="hidden md:flex space-x-10">
-          <a
-            href="#about"
-            className="text-gray-800 hover:text-primary transition-custom"
-          >
-            About
-          </a>
-          <a
-            href="#projects"
-            className="text-gray-800 hover:text-primary transition-custom"
-          >
-            Projects
-          </a>
-          <a
-            href="#experience-education"
-            className="text-gray-800 hover:text-primary transition-custom"
-          >
-            Career
-          </a>
-          <a
-            href="#contact"
-            className="text-gray-800 hover:text-primary transition-custom"
-          >
-            Contact
-          </a>
+          {sections.map((section) => (
+            <a
+              key={section.id}
+              href={`#${section.id}`}
+              className={cn(
+                "transition-custom",
+                activeSection === section.id
+                  ? "text-primary font-semibold"
+                  : "text-gray-800 hover:text-primary"
+              )}
+            >
+              {section.label}
+            </a>
+          ))}
         </div>
 
         {/* Mobile Menu Button */}
         <button
           className="md:hidden text-gray-800"
           aria-label="Toggle navigation menu"
+          aria-expanded={menuOpen}
+          aria-controls="mobile-menu"
           onClick={() => setMenuOpen((prev) => !prev)}
         >
           <svg
@@ -91,35 +102,25 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       {menuOpen && (
-        <div className="md:hidden bg-white shadow-md px-6 py-4 space-y-4">
-          <a
-            href="#about"
-            className="block text-gray-800 hover:text-primary transition-custom"
-            onClick={handleLinkClick}
-          >
-            About
-          </a>
-          <a
-            href="#projects"
-            className="block text-gray-800 hover:text-primary transition-custom"
-            onClick={handleLinkClick}
-          >
-            Projects
-          </a>
-          <a
-            href="#experience-education"
-            className="block text-gray-800 hover:text-primary transition-custom"
-            onClick={handleLinkClick}
-          >
-            Career
-          </a>
-          <a
-            href="#contact"
-            className="block text-gray-800 hover:text-primary transition-custom"
-            onClick={handleLinkClick}
-          >
-            Contact
-          </a>
+        <div
+          id="mobile-menu"
+          className="md:hidden bg-white shadow-md px-6 py-4 space-y-4"
+        >
+          {sections.map((section) => (
+            <a
+              key={section.id}
+              href={`#${section.id}`}
+              onClick={handleLinkClick}
+              className={cn(
+                "block transition-custom",
+                activeSection === section.id
+                  ? "text-primary font-semibold"
+                  : "text-gray-800 hover:text-primary"
+              )}
+            >
+              {section.label}
+            </a>
+          ))}
         </div>
       )}
     </nav>
